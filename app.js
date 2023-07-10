@@ -12,7 +12,7 @@ app.use(cors());
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Welcome to Captains Log App");
+  res.send("Welcome to Budget App");
 });
 
 //const logsController = require("./controllers/logsController.js");
