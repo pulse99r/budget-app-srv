@@ -1,10 +1,6 @@
 const express = require("express");
 const transactions = express.Router();
-const transactionsArray = require("../models/transactions");
-console.log("We're getting started!!")
-console.log("express:",express)
-console.log("transactions:",transactions)
-console.log("transactionsArray:",transactionsArray)
+const transactionsArray = require("../models/Transactions");
 
 // HOME
 transactions.get("/", (req, res) => {
@@ -18,6 +14,7 @@ transactions.get("/transactions", (req, res) => {
 
 // SHOW
 transactions.get("/:arrayIndex", (req, res) => {
+  console.log(req.params)
   if (transactionsArray[req.params.arrayIndex]) {
     res.json(transactionsArray[req.params.arrayIndex]);
   } else {

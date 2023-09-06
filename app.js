@@ -12,11 +12,11 @@ app.use(cors());
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Welcome to Budget App");
+  res.send("Welcome to Budget App!");
 });
 
-//const logsController = require("./controllers/logsController.js");
-//app.use("/logs", logsController);
+const transactionsController = require("./controllers/transactionsController.js");
+app.use("/Transactions", transactionsController);
 
 // 404 PAGE
 app.get("*", (req, res) => {
